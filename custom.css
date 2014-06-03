@@ -19,6 +19,10 @@ section.top div.container{
   padding: 0 15px;
 }
 
+.nav-tabs{
+  border-bottom:1px solid #4e5d6c;
+}
+
 /* to center nav tabs */
 .nav-tabs > li, .nav-pills > li {
     float:none;
@@ -41,14 +45,18 @@ section.top div.container{
 }
 
 .btn-custom{
-  background-color: #dff0d8;
-  border-color:#d6e9c6;
-  color:#3c763d;
+  background-color: #5cb85c;
+  border-color:transparent;
+  color:white;
 }
 
 .btn-custom:hover{
-  background-color: #dff0d8;
-  color:#3c763d;
+  background-color: #5cb85c;
+  color:#white;
+}
+
+.btn{
+  font-size:15px;
 }
 
 .panel{
@@ -56,6 +64,24 @@ section.top div.container{
   margin-right:10px;
 }
 
+.panel-heading{
+  font-weight:500;
+}
+
 .form-disabled-custom:hover{
   cursor:default;
+}
+
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
+  padding: 6px;
+  line-height: 1.42857143;
+  vertical-align: top;
+  border-top: 1px solid #4e5d6c;
+  font-size:15px;
+  font-weight:300;
 }
