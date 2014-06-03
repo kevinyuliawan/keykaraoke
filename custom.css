@@ -23,6 +23,10 @@ section.top div.container{
   border-bottom:1px solid #4e5d6c;
 }
 
+@media(max-width:481px) {
+
+}
+
 /* to center nav tabs */
 .nav-tabs > li, .nav-pills > li {
     float:none;
@@ -41,6 +45,13 @@ section.top div.container{
     .nav-tabs > li {
         float:none;
         display:block;
+    }
+    section.navigation div.container div.row ul.nav-tabs li.active a{
+      border-bottom:1px solid #4e5d6c;
+      background-color:#4E5D6C !important
+    }
+    ul.nav-tabs{
+      border-top:1px solid #4e5d6c;
     }
 }
 
@@ -85,3 +96,5 @@ section.top div.container{
   font-size:15px;
   font-weight:300;
 }
+
+
