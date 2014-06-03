@@ -1,0 +1,61 @@
+/* Space out content a bit */
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+section{
+  margin-bottom:20px;
+}
+
+section.top div.container{
+  text-align:center;
+  /* border-bottom:1px solid #eee; */
+}
+
+.container {
+  width: auto;
+  max-width: 680px;
+  padding: 0 15px;
+}
+
+/* to center nav tabs */
+.nav-tabs > li, .nav-pills > li {
+    float:none;
+    display:inline-block;
+    *display:inline; /* ie7 fix */
+     zoom:1; /* hasLayout ie7 trigger */
+}
+
+/* to center nav tabs */
+.nav-tabs, .nav-pills {
+    text-align:center;
+}
+
+/* for on smaller screens */
+@media (max-width: 480px) { 
+    .nav-tabs > li {
+        float:none;
+        display:block;
+    }
+}
+
+.btn-custom{
+  background-color: #dff0d8;
+  border-color:#d6e9c6;
+  color:#3c763d;
+}
+
+.btn-custom:hover{
+  background-color: #dff0d8;
+  color:#3c763d;
+}
+
+.panel{
+  margin-left:10px;
+  margin-right:10px;
+}
+
+.form-disabled-custom:hover{
+  cursor:default;
+}

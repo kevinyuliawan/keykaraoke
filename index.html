@@ -1,0 +1,74 @@
+<html>
+<head>
+  <title>keykaraoke.com</title>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+  <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="custom.css" rel="stylesheet">
+</head>
+
+<body>
+  <section class="top">
+    <div class="container">
+      <div class="row">
+        <h3>keykaraoke.com</h3>
+      </div>
+      <div class="row livestatus" style="color:red">
+        <h4><strong>LIVE! @</strong></h4>
+        <h4>Two Boots, Bridgeport, CT</h4>
+      </div>
+    </div>
+  </section>
+
+  <section class="navigation">
+    <div class="container">
+      <div class="row">
+        <ul class="nav nav-tabs">
+          <li class="active"><a href="#">Who's Up Now?</a></li>
+          <li><a href="queue.html">Song Queue/Request A Song <span class="badge" style="margin-left:6px">10</span></a></li>
+          <li><a href="leaderboard.html">Leaderboard</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="content">
+    <div class="container">
+      <div class="row">
+        <div class="panel panel-primary">
+          <!-- Default panel contents -->
+          <div class="panel-heading">Who's Up Now?</div>
+          <ul class="list-group">
+            <li class="list-group-item">name: John Smith
+            <li class="list-group-item">song: Queen - We Are The Champions</li>
+            <li class="list-group-item">Number of thumbs ups: 6 <i class="fa fa-thumbs-o-up"></i></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+          <div class="panel panel-success">
+            <!-- Default panel contents -->
+            <div class="panel-heading">Liking what you hear? Send them a message and a thumbs up!</div>
+            <div class="panel-body">
+              <div class="input-group">
+                <input class="form-control input-lg" type="text" placeholder="Your words of encouragement...">
+                <span class="input-group-addon">140</span>
+              </div>
+              <br>
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Enter their voting code here.">
+                <span class="input-group-addon"><i class="fa fa-thumbs-o-up"></i></span>
+              </div>
+              <br>
+              <button type="button" class="btn btn-default btn-lg btn-block btn-custom">Submit</button>
+            </div>
+          </div> 
+      </div>
+    </div>
+  </section>
+
+</body>
+
+</html>
