@@ -31,10 +31,11 @@ if ('development' == app.get('env')) {
 app.get('/', routes.index);
 app.get('/users', user.list);
 
-app.get('/queue', kar.queue);
-app.get('/doneandcurrent', kar.dac);
-app.post('/message', kar.messagepost);
-app.get('/message', kar.messageget);
+app.get('/queue', kar.queue); // first is currently playing
+app.get('/done', kar.done); //last is most recent
+app.get('/thumbs', kar.thumbs);
+app.get('/finish', kar.finishCurrent);
+
 
 http.createServer(app).listen(app.get('port'), function() {
     console.log('Express server listening on port ' + app.get('port'));
