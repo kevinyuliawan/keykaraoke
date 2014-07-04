@@ -33,6 +33,8 @@ app.get('/users', user.list);
 
 app.get('/queue', kar.queue);
 app.get('/doneandcurrent', kar.dac);
+app.post('/message', kar.message.post);
+app.get('/message', kar.message.get);
 
 http.createServer(app).listen(app.get('port'), function() {
     console.log('Express server listening on port ' + app.get('port'));
