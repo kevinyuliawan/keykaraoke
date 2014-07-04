@@ -36,6 +36,7 @@ app.get('/done', kar.done); //last is most recent
 app.get('/thumbs', kar.thumbs);
 app.get('/finish', kar.finishCurrent);
 app.get('/request/:name/:artist/:song', kar.request)
+app.get('/requestfront/:name/:artist/:song', kar.requestfront);
 
 
 http.createServer(app).listen(app.get('port'), function() {

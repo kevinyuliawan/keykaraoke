@@ -45,9 +45,11 @@ exports.finishCurrent = function(req, res) {
 exports.request = function(req, res) {
     var song = req.params.artist + ' - ' + req.params.song;
     queue.push(new Person(req.params.name, song, 0));
+    res.send(200);
 }
 
 exports.requestfront = function(req, res) {
     var song = req.params.artist + ' - ' + req.params.song;
     queue.unshift(new Person(req.params.name, song, 0));
+    res.send(200);
 }
