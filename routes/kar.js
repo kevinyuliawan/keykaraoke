@@ -20,10 +20,18 @@ var doneAndCurrent = [
     new Person("Zach", "Toby Williams - Red Solo Cup Currently", 3)
 ];
 
+var messages = [
+
+];
+
 exports.queue = function(req, res) {
     res.json(queue);
 }
 
 exports.dac = function(req, res) {
     res.json(doneAndCurrent);
+}
+
+exports.message = function(req, res) {
+    console.log(req.body);
 }
