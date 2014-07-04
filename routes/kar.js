@@ -30,11 +30,11 @@ exports.dac = function(req, res) {
     res.json(doneAndCurrent);
 }
 
-exports.message.post = function(req, res) {
+exports.messagepost = function(req, res) {
     messages.push(req.body);
     res.json(req.body);
 }
 
-exports.message.get = function(req, res) {
+exports.messageget = function(req, res) {
     res.json(messages);
 }
