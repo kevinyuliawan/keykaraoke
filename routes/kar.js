@@ -4,7 +4,7 @@ var Person = function(name, song, thumbs) {
     this.thumbs = thumbs;
 };
 
-var queue = [
+var queue = [ // first is currently playing
     new Person('Adam', 'Queen - We Are The Champions', 0),
     new Person('Bob', "Cage The Elephant - Ain't No Rest For The Wicked", 0),
     new Person("Charles", "Bad Rabbits - Fall In Love", 0),
@@ -14,7 +14,7 @@ var queue = [
 
 
 
-var doneAndCurrent = [
+var done = [ //last is most recent
     new Person("Xavier", "Pokemon Theme Song", 4),
     new Person("Yelyah", "Paramore - Aint It Fun", 6),
     new Person("Zach", "Toby Williams - Red Solo Cup Currently", 3)
@@ -26,15 +26,22 @@ exports.queue = function(req, res) {
     res.json(queue);
 }
 
-exports.dac = function(req, res) {
-    res.json(doneAndCurrent);
+exports.done = function(req, res) {
+    res.json(done);
 }
 
-exports.messagepost = function(req, res) {
-    messages.push(req.body);
+exports.thumbs = function(req, res) {
+    queue[0].thumbs += 1;
+    res.send(200);
+}
+
+exports.finishCurrent = function(req, res) {
+    // pop current from queue, add to done
+    var cur = queue.shift();
+    done.push(cur);
+    res.send(200);
+}
+
+exports.push = function(req, res) {
     res.json(req.body);
-}
-
-exports.messageget = function(req, res) {
-    res.json(messages);
 }
