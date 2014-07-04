@@ -1,0 +1,96 @@
+<section class="content">
+  <div class="container">
+    <!-- song queue -->
+    <div class="row">
+      <div class="panel panel-primary">
+        <!-- Default panel contents -->
+        <div class="panel-heading">Song Queue <span style="float:right" ng-show="viewmore">View More (10)</span>
+        </div>
+        <!-- table -->
+        <table class="table">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Name</th>
+              <th>Song</th>
+
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="item in queue" ng-class="{active: $first}">
+              <td><i class="fa fa-play-circle-o" style="margin-top:3px;" ng-show="$first"></i><span ng-show="!$first">{{$index}}</span>
+              </td>
+              <td>{{item.name}}</td>
+              <td>{{item.song}}</td>
+            </tr>
+          </tbody>
+
+        </table>
+      </div>
+    </div>
+
+    <!-- request a song -->
+    <div class="row">
+      <div class="panel panel-success">
+        <!-- Default panel contents -->
+        <div class="panel-heading">Request A Song</div>
+        <!-- search for a song -->
+
+        <div class="panel-body">
+          <!-- put search in panel body so it doesnt take full width -->
+          <div class="input-group">
+            <span class="input-group-addon">Your Name:</span>
+            <input type="text" class="form-control input-lg" placeholder="Name" ng-model="request.name">
+          </div>
+          <br>
+          <div class="input-group">
+            <span class="input-group-addon">Song Artist:</span>
+            <input type="text" class="form-control input-lg" placeholder="Song Artist" ng-model="request.artist">
+          </div>
+          <br>
+          <div class="input-group">
+             <span class="input-group-addon" style="padding-right:25px;">Song Title: </span>
+            <input type="text" class="form-control input-lg" placeholder="Song Title" ng-model="request.title">
+
+
+
+          </div>
+          <br>
+          <div class="input-group">
+            <button type="button" class="btn btn-default btn-lg btn-block btn-custom" style="margin-top:20px;margin-left:15px;" ng-disabled="submitSuccess" ng-click="submitRequest()">Sing it!</button>
+            <span class="input-group-addon"></span>
+          </div>
+          <br>
+          <p ng-show="submitSuccess">Your song has been added to the queue!</p>
+
+        </div>
+
+        <!-- Small modal -->
+        <div class="modal fade sing-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <!-- modal content -->
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">Song Request Form</h4>
+              </div>
+              <div class="modal-body">
+                <form role="form">
+                  <input type="text" class="form-control" placeholder="Your name">
+                  <br>
+                  <input type="tel" class="form-control" placeholder="Phone # (optional, for SMS notification)">
+                  <br>
+                  <input disabled type="text" class="form-control form-disabled-custom" value="'Happy Together' by The Turtles">
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Submit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /end modal -->
+      </div>
+    </div>
+</section>

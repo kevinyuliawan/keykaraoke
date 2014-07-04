@@ -5,19 +5,23 @@ var Person = function(name, song, thumbs) {
 };
 
 var queue = [ // first is currently playing
+    /*
     new Person('Adam', 'Queen - We Are The Champions', 0),
     new Person('Bob', "Cage The Elephant - Ain't No Rest For The Wicked", 0),
     new Person("Charles", "Bad Rabbits - Fall In Love", 0),
     new Person("Dave", "Usher - There Goes My Baby", 0),
     new Person("Earl", "Weezer - My Name Is Earl", 0)
+    */
 ];
 
 
 
 var done = [ //last is most recent
+    /*
     new Person("Xavier", "Pokemon Theme Song", 4),
     new Person("Yelyah", "Paramore - Aint It Fun", 6),
     new Person("Zach", "Toby Williams - Red Solo Cup Currently", 3)
+    */
 ];
 
 var messages = [];

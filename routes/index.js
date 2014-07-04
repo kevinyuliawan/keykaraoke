@@ -3,9 +3,7 @@
  */
 
 exports.index = function(req, res) {
-    res.render('index', {
-        title: 'Express'
-    });
+    res.render('index.html');
 };
 
 exports.queue = function(req, res) {

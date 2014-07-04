@@ -1,0 +1,32 @@
+<section class="content">
+    <div class="container">
+      <!-- song queue -->
+      <div class="row">
+        <div class="panel panel-primary">
+          <!-- Default panel contents -->
+          <div class="panel-heading">Leaderboard</div>
+          <!-- table -->
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Name</th>
+                  <th>Song</th>
+                  <th><i class="fa fa-thumbs-o-up"></i></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr ng-repeat="item in dac | orderBy:'-thumbs'">
+                  <td>{{$index+1}}</td>
+                  <td>{{item.name}}</td>
+                  <td>{{item.song}}</td>
+                  <td>{{item.thumbs}}</td>
+                </tr>
+              </tbody>
+
+            </table>
+        </div>
+      </div>
+
+    </div>
+  </section>

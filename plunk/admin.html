@@ -1,0 +1,45 @@
+<div class="container">
+<div class="row">
+  <button type="button" class="btn btn-default btn-lg btn-block btn-custom" ng-click="finishCurrent();" ng-disabled="wordsSent">Finish Current</button>
+  </div>
+
+  <br>
+  <br>
+
+  <div class="row">
+    <div class="panel panel-success">
+      <!-- Default panel contents -->
+      <div class="panel-heading">Request A Song In Front</div>
+      <!-- search for a song -->
+
+      <div class="panel-body">
+        <!-- put search in panel body so it doesnt take full width -->
+        <div class="input-group">
+          <span class="input-group-addon">Your Name:</span>
+          <input type="text" class="form-control input-lg" placeholder="Name" ng-model="request.name">
+        </div>
+        <br>
+        <div class="input-group">
+          <span class="input-group-addon">Song Artist:</span>
+          <input type="text" class="form-control input-lg" placeholder="Song Artist" ng-model="request.artist">
+        </div>
+        <br>
+        <div class="input-group">
+          <span class="input-group-addon" style="padding-right:25px;">Song Title: </span>
+          <input type="text" class="form-control input-lg" placeholder="Song Title" ng-model="request.title">
+
+
+
+        </div>
+        <br>
+        <div class="input-group">
+          <button type="button" class="btn btn-default btn-lg btn-block btn-custom" style="margin-top:20px;margin-left:15px;" ng-disabled="submitSuccess" ng-click="submitFront()">Sing it!</button>
+          <span class="input-group-addon"></span>
+        </div>
+        <br>
+        <p ng-show="submitSuccess">Your song has been added to the queue!</p>
+
+      </div></div></div>
+
+
+    </div>

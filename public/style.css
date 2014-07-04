@@ -1,0 +1,100 @@
+/* Space out content a bit */
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+section{
+  margin-bottom:20px;
+}
+
+section.top div.container{
+  text-align:center;
+  /* border-bottom:1px solid #eee; */
+}
+
+.container {
+  width: auto;
+  max-width: 680px;
+  padding: 0 15px;
+}
+
+.nav-tabs{
+  border-bottom:1px solid #4e5d6c;
+}
+
+@media(max-width:481px) {
+
+}
+
+/* to center nav tabs */
+.nav-tabs > li, .nav-pills > li {
+    float:none;
+    display:inline-block;
+    *display:inline; /* ie7 fix */
+     zoom:1; /* hasLayout ie7 trigger */
+}
+
+/* to center nav tabs */
+.nav-tabs, .nav-pills {
+    text-align:center;
+}
+
+/* for on smaller screens */
+@media (max-width: 480px) { 
+    .nav-tabs > li {
+        float:none;
+        display:block;
+    }
+    section.navigation div.container div.row ul.nav-tabs li.active a{
+      border-bottom:1px solid #4e5d6c;
+      background-color:#4E5D6C !important
+    }
+    ul.nav-tabs{
+      border-top:1px solid #4e5d6c;
+    }
+}
+
+.btn-custom{
+  background-color: #5cb85c;
+  border-color:transparent;
+  color:white;
+}
+
+.btn-custom:hover{
+  background-color: #5cb85c;
+  color:#white;
+}
+
+.btn{
+  font-size:15px;
+}
+
+.panel{
+  margin-left:10px;
+  margin-right:10px;
+}
+
+.panel-heading{
+  font-weight:500;
+}
+
+.form-disabled-custom:hover{
+  cursor:default;
+}
+
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
+  padding: 6px;
+  line-height: 1.42857143;
+  vertical-align: top;
+  border-top: 1px solid #4e5d6c;
+  font-size:15px;
+  font-weight:300;
+}
+
+

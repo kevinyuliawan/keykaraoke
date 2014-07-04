@@ -1,0 +1,37 @@
+<section class="content">
+  <div class="container">
+    <div class="row">
+      <div class="panel panel-primary">
+        <!-- Default panel contents -->
+        <div class="panel-heading">Who's Up Now?</div>
+        <ul class="list-group">
+          <li class="list-group-item">name: {{current.name}}
+            <li class="list-group-item">song: {{current.song}}</li>
+            <li class="list-group-item">Number of thumbs ups: {{current.thumbs}} <i class="fa fa-thumbs-o-up"></i>
+            </li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="panel panel-success">
+        <!-- Default panel contents -->
+        <div class="panel-heading">Liking what you hear? Send them a thumbs up!</div>
+        <div class="panel-body">
+          <div class="input-group">
+            <input class="form-control input-lg" type="text" placeholder="Your words of encouragement..." ng-model="words" maxlength="140" ng-show="null">
+            <span class="input-group-addon" ng-show="null">{{140-words.length}}</span>
+          </div>
+          <br>
+          <div class="input-group" ng-show="null">
+            <input type="text" class="form-control" placeholder="Enter their voting code here.">
+            <span class="input-group-addon"><i class="fa fa-thumbs-o-up"></i></span>
+          </div>
+          <br>
+          <button type="button" class="btn btn-default btn-lg btn-block btn-custom" ng-click="submitWords()" ng-disabled="wordsSent">I like this <i class="fa fa-thumbs-o-up" style="margin-left:5px;"></i></button>
+          <br>
+          <p ng-show="wordsSent">Your thumbs up for {{current.name}} has been sent!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
