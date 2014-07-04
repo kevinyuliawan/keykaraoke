@@ -35,6 +35,7 @@ app.get('/queue', kar.queue); // first is currently playing
 app.get('/done', kar.done); //last is most recent
 app.get('/thumbs', kar.thumbs);
 app.get('/finish', kar.finishCurrent);
+app.get('/request/:name/:artist/:song', kar.request)
 
 
 http.createServer(app).listen(app.get('port'), function() {

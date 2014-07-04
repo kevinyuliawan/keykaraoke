@@ -42,6 +42,7 @@ exports.finishCurrent = function(req, res) {
     res.send(200);
 }
 
-exports.push = function(req, res) {
-    res.json(req.body);
+exports.request = function(req, res) {
+    var song = req.params.artist + ' - ' + req.params.song
+    queue.push(new Person(req.params.name, song, 0));
 }
