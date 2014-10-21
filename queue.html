@@ -1,0 +1,177 @@
+<html>
+<head>
+  <title>keykaraoke.com</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <!-- <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet"> -->
+  <link href="http://bootswatch.com/superhero/bootstrap.min.css" rel="stylesheet">
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+  <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="custom.css" rel="stylesheet">
+</head>
+
+<body>
+  <section class="top">
+    <div class="container">
+      <div class="row">
+        <h3>kevkaraoke.com</h3>
+      </div>
+      <div class="row livestatus" style="color:red">
+        <h4><strong>LIVE! @</strong></h4>
+        <h4>Two Boots, Bridgeport, CT</h4>
+      </div>
+    </div>
+  </section>
+
+  <section class="navigation">
+    <div class="container">
+      <div class="row">
+        <ul class="nav nav-tabs">
+          <li><a href="index.html">Who's Up Now?</a></li>
+          <li class="active"><a href="#">Song Queue/Request A Song <span class="badge" style="margin-left:6px">10</span></a></li>
+          <li><a href="leaderboard.html">Leaderboard</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="content">
+    <div class="container">
+      <!-- song queue -->
+      <div class="row">
+        <div class="panel panel-primary">
+          <!-- Default panel contents -->
+          <div class="panel-heading">Song Queue <span style="float:right">View More (10)</span></div>
+          <!-- table -->
+            <table class="table">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Name</th>
+                  <th>Song</th>
+                  <th>By</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td></td>
+                  <td>James Smith</td>
+                  <td>Mardy Bum</td>
+                  <td>Arctic Monkeys</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Jeremy Smith</td>
+                  <td>Ignition (Remix)</td>
+                  <td>R. Kelly</td>
+                </tr>
+                <!-- end previous -->
+                <tr class="active">
+                  <td><i class="fa fa-play-circle-o" style="margin-top:3px;"></i></td>
+                  <td>John Smith</td>
+                  <td>Queen</td>
+                  <td>We Are The Champions</td>
+                </tr>
+                <!-- end current -->
+                <tr>
+                  <td></td>
+                  <td>Jim Smith</td>
+                  <td>Beat It</td>
+                  <td>Michael Jackson</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Jake Smith</td>
+                  <td>Roar</td>
+                  <td>Katy Perry</td>
+                </tr>
+                <!-- end after -->
+              </tbody>
+
+            </table>
+        </div>
+      </div>
+
+      <!-- request a song -->
+      <div class="row">
+          <div class="panel panel-success">
+            <!-- Default panel contents -->
+            <div class="panel-heading">Request A Song</div>
+              <!-- search for a song -->
+              <div class="panel-body"><!-- put search in panel body so it doesnt take full width -->
+                <div class="input-group">
+                  <input type="text" class="form-control" value="happy">
+                  <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
+                </div>
+              </div>
+              <!-- display results ajax -->
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th style="width:13%;">Selected</th>
+                    <th>Song</th>
+                    <th>By</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td></td>
+                    <td>Happy</td>
+                    <td>Pharrell</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>Happy Birthday</td>
+                    <td>The Beatles</td>
+                  </tr>
+                  <tr class="active">
+                    <td><i class="fa fa-check-square-o"></i></td>
+                    <td>Happy Together</td>
+                    <td>The Turtles</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>A Song</td>
+                    <td>A Happy Band</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="panel-body"><!-- make button in body so that it wont stretch to full width -->
+                <button type="button" class="btn btn-default btn-lg btn-block btn-custom" data-toggle="modal" data-target=".sing-modal">Sing it!</button>
+              </div>
+
+              <!-- Small modal -->
+                <div class="modal fade sing-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content"><!-- modal content -->
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                          <h4 class="modal-title" id="myModalLabel">Song Request Form</h4>
+                        </div>
+                        <div class="modal-body">
+                          <form role="form">
+                            <input type="text" class="form-control" placeholder="Your name">
+                            <br>
+                            <input type="tel" class="form-control" placeholder="Phone # (optional, for SMS notification)">
+                            <br>
+                            <input disabled type="text" class="form-control form-disabled-custom" value="'Happy Together' by The Turtles">
+                          </form>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Submit</button>
+                        </div>
+                    </div>
+                  </div>
+                </div><!-- /end modal -->
+      </div>
+    </div>
+  </section>
+
+</body>
+
+</html>
